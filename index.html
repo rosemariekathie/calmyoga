@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ヨガグルー - あなたの健康をサポートします</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Basic styles for the modal */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 80%;
+        max-width: 500px;
+        position: relative;
+        text-align: center;
+      }
+
+      .modal-content img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+      }
+
+      .close {
+        position: absolute;
+        top: 5px;
+        right: 20px;
+        font-size: 60px;
+        cursor: pointer;
+      }
+
+      .modal-heading {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .modal-description {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Modal Structure -->
+    <div class="modal" id="yogaModal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <img src="image/logo.png" alt="アイコン" />
+        <h2 class="modal-heading">ようこそ！</h2>
+        <p class="modal-description">
+          私たちはあなたの健康づくりをお手伝いします。無料で始めて、人生を取り戻しましょう。
+        </p>
+      </div>
+    </div>
+    <header>
+      <div class="mainheader">
+        <div class="logo">
+          <img src="image/logo.png" alt="ロゴ" />
+        </div>
+
+        <nav>
+          <a href="#">ホーム</a>
+          <a href="#">サービス</a>
+          <a href="#">会社概要</a>
+          <a href="#">お問い合わせ</a>
+        </nav>
+
+        <div class="menubtn">
+          <button>ご相談ください</button>
+        </div>
+      </div>
+
+      <main>
+        <section class="left-sec">
+          <h2>あなたの健康を守ります</h2>
+          <h1>私たちは世界のヨガグルーです。</h1>
+          <p>
+            私たちは24時間365日、あなたのケアのためにここにいます。どんな助けでも、お気軽にお電話ください。
+          </p>
+          <button>予約をする</button>
+        </section>
+
+        <section class="right-sec">
+          <figure>
+            <img src="image/mainbg.png" alt="メイン背景" />
+          </figure>
+        </section>
+      </main>
+    </header>
+
+    <section
+      id="classes-schedules"
+      style="padding: 40px; background-color: #f5f5f5"
+    >
+      <div style="max-width: 1200px; margin: 0 auto; text-align: center">
+        <h2 style="font-size: 32px; margin-bottom: 20px">
+          クラスとスケジュール
+        </h2>
+        <p style="font-size: 18px; margin-bottom: 40px">
+          初心者から上級者まで、さまざまなヨガクラスを提供しています。スケジュールをご覧ください。
+        </p>
+
+        <div
+          style="display: flex; flex-wrap: wrap; justify-content: space-between"
+        >
+          <!-- Class Card 1 -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              margin: 10px;
+              padding: 20px;
+              background-color: #fff;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <h3 style="font-size: 24px; margin-bottom: 10px">初心者クラス</h3>
+            <p>ヨガの基礎を学び、柔軟性とバランスを高めましょう。</p>
+            <p><strong>毎週月曜日と水曜日: 10:00 - 11:00</strong></p>
+          </div>
+          <!-- Class Card 2 -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              margin: 10px;
+              padding: 20px;
+              background-color: #fff;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <h3 style="font-size: 24px; margin-bottom: 10px">中級クラス</h3>
+            <p>より高度なポーズと呼吸法に挑戦し、集中力を高めます。</p>
+            <p><strong>毎週火曜日と木曜日: 18:00 - 19:00</strong></p>
+          </div>
+          <!-- Class Card 3 -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              margin: 10px;
+              padding: 20px;
+              background-color: #fff;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <h3 style="font-size: 24px; margin-bottom: 10px">瞑想クラス</h3>
+            <p>
+              心を落ち着かせ、内なる平和を見つけるための瞑想セッションです。
+            </p>
+            <p><strong>毎週金曜日: 12:00 - 13:00</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="instructors" style="padding: 40px; background-color: #fff">
+      <div style="max-width: 1200px; margin: 0 auto; text-align: center">
+        <h2 style="font-size: 32px; margin-bottom: 20px">
+          インストラクター紹介
+        </h2>
+        <p style="font-size: 18px; margin-bottom: 40px">
+          私たちのインストラクターは豊富な経験と専門知識を持ち、あなたのヨガの旅をサポートします。
+        </p>
+
+        <div
+          style="display: flex; flex-wrap: wrap; justify-content: space-between"
+        >
+          <!-- Instructor Card 1 -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              margin: 10px;
+              padding: 20px;
+              background-color: #f5f5f5;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <img
+              src="image/yoga_instructor_1.jpg"
+              alt="インストラクター1"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin-bottom: 15px;
+              "
+            />
+            <h3 style="font-size: 24px; margin-bottom: 10px">田中 美穂</h3>
+            <p>
+              10年以上の経験を持ち、初心者から上級者まで幅広いクラスを担当しています。
+            </p>
+          </div>
+          <!-- Instructor Card 2 -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              margin: 10px;
+              padding: 20px;
+              background-color: #f5f5f5;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <img
+              src="image/yoga_instructor_2.jpg"
+              alt="インストラクター2"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin-bottom: 15px;
+              "
+            />
+            <h3 style="font-size: 24px; margin-bottom: 10px">佐藤 健一</h3>
+            <p>
+              アドバンスクラスと瞑想セッションを担当し、マインドフルネスの専門家です。
+            </p>
+          </div>
+          <!-- Instructor Card 3 -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              margin: 10px;
+              padding: 20px;
+              background-color: #f5f5f5;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <img
+              src="image/yoga_instructor_3.jpg"
+              alt="インストラクター3"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin-bottom: 15px;
+              "
+            />
+            <h3 style="font-size: 24px; margin-bottom: 10px">鈴木 花子</h3>
+            <p>
+              ヨガ療法士として、特別なニーズを持つ方への指導に特化しています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" style="padding: 40px; background-color: #f5f5f5">
+      <div style="max-width: 1200px; margin: 0 auto; text-align: center">
+        <h2 style="font-size: 32px; margin-bottom: 20px">
+          お客様の声と成功事例
+        </h2>
+        <p style="font-size: 18px; margin-bottom: 40px">
+          私たちのヨガプログラムで変化を実感したお客様の声をお届けします。
+        </p>
+
+        <div
+          style="display: flex; flex-wrap: wrap; justify-content: space-between"
+        >
+          <!-- Testimonial 1 -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              margin: 10px;
+              padding: 20px;
+              background-color: #fff;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <h3 style="font-size: 24px; margin-bottom: 10px">山田 花子さん</h3>
+            <p>
+              「このスタジオでのヨガは私の人生を変えました。ストレスが減り、心と体がとても健康になりました。」
+            </p>
+          </div>
+          <!-- Testimonial 2 -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              margin: 10px;
+              padding: 20px;
+              background-color: #fff;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            "
+          >
+            />
+            <h3 style="font-size: 24px; margin-bottom: 10px">佐藤 健さん</h3>
+            <p>
+              「仕事の合間にヨガを始めたおかげで、集中力が向上し、日々の疲れも軽減されました。」
+            </p>
+          </div>
+          <!-- Testimonial 3 -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              margin: 10px;
+              padding: 20px;
+              background-color: #fff;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <h3 style="font-size: 24px; margin-bottom: 10px">
+              高橋 真理子さん
+            </h3>
+            <p>
+              「瞑想クラスに参加してから、精神的な安定と平和を感じられるようになりました。おすすめです！」
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="membership-pricing"
+      style="padding: 40px; background-color: #fff"
+    >
+      <div style="max-width: 1200px; margin: 0 auto; text-align: center">
+        <h2 style="font-size: 32px; margin-bottom: 20px">
+          メンバーシップ＆料金
+        </h2>
+        <p style="font-size: 18px; margin-bottom: 40px">
+          あなたのライフスタイルに合わせた柔軟なメンバーシッププランをご用意しています。
+        </p>
+
+        <div
+          style="display: flex; flex-wrap: wrap; justify-content: space-between"
+        >
+          <!-- Plan 1 -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              margin: 10px;
+              padding: 20px;
+              background-color: #f5f5f5;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <h3 style="font-size: 24px; margin-bottom: 10px">
+              ベーシックプラン
+            </h3>
+            <p>初心者向け！月4回のクラスで心と体の健康を体験しよう。</p>
+            <p><strong>¥5,000 / 月</strong></p>
+          </div>
+          <!-- Plan 2 -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              margin: 10px;
+              padding: 20px;
+              background-color: #f5f5f5;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <h3 style="font-size: 24px; margin-bottom: 10px">
+              スタンダードプラン
+            </h3>
+            <p>週に2回のクラスで、心身をリフレッシュ！今すぐお試しください。</p>
+            <p><strong>¥8,500 / 月</strong></p>
+          </div>
+          <!-- Plan 3 -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              margin: 10px;
+              padding: 20px;
+              background-color: #f5f5f5;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <h3 style="font-size: 24px; margin-bottom: 10px">
+              アドバンスプラン
+            </h3>
+            <p>毎日クラス受講可能！上級者向けに特化したプランです。</p>
+            <p><strong>¥12,000 / 月</strong></p>
+          </div>
+          <!-- Plan 4 -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              margin: 10px;
+              padding: 20px;
+              background-color: #f5f5f5;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <h3 style="font-size: 24px; margin-bottom: 10px">
+              ファミリープラン
+            </h3>
+            <p>家族で健康をサポート！割引ありでお得なプランです。</p>
+            <p><strong>¥15,000 / 月</strong></p>
+          </div>
+          <!-- Plan 5 -->
+          <div
+            style="
+              flex: 1;
+              min-width: 250px;
+              margin: 10px;
+              padding: 20px;
+              background-color: #f5f5f5;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <h3 style="font-size: 24px; margin-bottom: 10px">
+              オンラインプラン
+            </h3>
+            <p>
+              いつでもどこでもヨガを楽しめる！オンラインでレッスンを受講可能。
+            </p>
+            <p><strong>¥3,000 / 月</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Show the modal when the page loads
+      window.onload = function () {
+        const modal = document.getElementById("yogaModal");
+        const closeModal = document.getElementById("closeModal");
+
+        // Display the modal
+        modal.style.display = "flex";
+
+        // Close the modal when clicking the close icon
+        closeModal.onclick = function () {
+          modal.style.display = "none";
+        };
+
+        // Close the modal when clicking anywhere outside the modal content
+        window.onclick = function (event) {
+          modal.style.display = "none";
+        };
+      };
+    </script>
+  </body>
+</html>
